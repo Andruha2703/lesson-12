@@ -1,0 +1,267 @@
+
+.wrapper {
+	overflow: hidden;
+	position: relative;
+   min-height: 100%;
+}
+[class*="__container"]{
+   width: 1200px;
+   margin: 0 auto;
+}
+[class*="__block"]{
+   width: 200px;
+   height: 200px;
+   border-radius: 8px;
+   margin-bottom: 30px;
+   margin-left: 45%;
+}
+[class*="__item"]{
+   width: 200px;
+   height: 200px;
+   border-radius: 8px;
+   transition: all 0.8s ease 0s;
+}
+[class*="__text"]{
+   text-transform: uppercase;
+   font-size: 25px;
+   text-align: center;
+   color: aliceblue;
+   padding-top: 45%;
+}
+.transform {
+   background: rgb(71, 70, 66);
+   padding: 20px;
+   
+}
+
+.translate__block {
+   background-color: blueviolet;
+}
+.translate__item {
+   background: darkorange;
+}
+.translate__item:hover{
+   transform: translate(20px,25px);
+   
+}
+.scale__blok {
+   background: crimson;
+}
+.scale__item {
+   background: chartreuse;
+}
+.scale__item:hover{
+   transform: scale(2);
+}
+.rotate__block {
+   background: fuchsia;
+}
+.rotate__item {
+   background: deepskyblue;
+}
+.rotate__item:hover{
+   transform: rotate(-180deg);
+}
+.skew__block {
+   background: darkmagenta;
+}
+.skew {
+   
+}
+.skew__item {
+   background: rgb(134, 139, 61);
+}
+.skew__item:hover{
+   transform: skew(30deg,5deg);
+}
+
+.origin__block {
+   background: aquamarine;
+}
+.origin__item {
+   background: darkviolet;
+   transform-origin: 0 0;
+}
+.origin__item:hover{
+ 	transform: rotate(20deg);
+}
+.perspective__block {
+   background: darkgray;
+   perspective: 200px;
+	perspective-origin:center;
+}
+.perspective__item {
+   background: red;
+ 
+}
+.perspective__item:hover{
+   transform: rotateX(50deg);
+}
+.rotate3d__block {
+   background: darkslategrey;
+
+}
+.rotate3d__item {
+   background: rgb(198, 210, 34);
+}
+.rotate3d__item:hover{
+   transform: rotate3d(1,1,1, 90deg);
+}
+.perspective-style {
+   
+}
+.perspective-style__block {
+   background: blue;
+   perspective: 200px;
+	transform-style: preserve-3d;
+}
+.perspective-style__item {
+   background: rgb(54, 106, 57);
+   transform: rotateY(180deg);
+   
+}
+.perspective-style__block:hover .perspective-style__item{
+   transform: rotateY(0deg);
+}
+.backface__block {
+   position: relative;
+	width: 200px;
+	height: 200px;
+	transition: all 0.8s ease 0s;
+	transform-style: preserve-3d;
+}
+.backface__front,
+.backface__back {
+   position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.backface__front {
+   z-index: 2;
+	transform: rotateY(0deg);
+	background-color: #e40bf3;
+	backface-visibility: hidden;
+}
+.backface__back {
+   transform: rotateY(-180deg);
+	background-color: rgba(0, 250, 167, 0.5);
+}
+.backface__block:hover {
+	transform: rotateY(-180deg);
+}
+.Island {
+}
+.island__container {
+   width: 1200px;
+   
+}
+.island__content {
+}
+.island__img {
+
+}
+.island__image img{
+   width: 100%;
+  
+}
+.img__sky {
+   position: relative;
+   top: 580px;
+}
+.iimg__sun {
+   width: 200px;
+   height: 200px;
+   position: absolute;
+   top: 20px;
+   left: 30px;
+
+}
+.iimg__sun:hover{
+   transform: rotate(180deg);
+   transition: all 5s ease 0s;
+}
+.cloud{
+
+}
+.cloud__block {
+   position: absolute;
+   top: 150px;
+   left: 50px;
+	width: 200px;
+	height: 200px;
+	transition: all 0.8s ease 0s;
+	transform-style: preserve-3d;
+}
+.cloud__front,
+.cloud__back {
+   position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.cloud__front {
+   z-index: 100;
+	transform: rotateY(0deg);
+   background: url("../img/cloud.png") 0 0 / 100% no-repeat;
+	backface-visibility: hidden;
+}
+.cloud__back {
+   transform: rotateY(-180deg);
+	background: url("../img/rain.png") 0 0 / 100% no-repeat;
+   backface-visibility: hidden;
+}
+.cloud__block:hover {
+	transform: rotateY(-180deg);
+}
+
+.img__island  img{
+   width: 300px;
+   height: 200px;
+   position: relative;
+   bottom: 600px;
+   left: 500px;
+}
+
+.img__block {
+   position: relative;
+   width: 600px;
+   height: 0;
+   bottom: 900px;
+   left: -500px;
+}
+
+.img__ship img {
+   width: 300px;
+   height: 200px;
+   position: relative;
+   bottom: 400px;
+   left: 100px;
+}
+.img__ship :hover{
+   transform: translate(800px);
+   transition: all 5s ease 0s;
+}
+.img__man {
+   width: 100px;
+   height: 200px;
+   position: relative;
+   bottom: 800px;
+   left: 300px;  
+}
+.img__help {
+   width: 100px;
+   height: 200px;
+   position: relative;
+   bottom: 160px;
+   left: 50px; 
+   visibility: hidden; 
+   
+}
+.img__man:hover .img__help{
+   visibility: visible;
+   transform: scale(1.5);
+   transition: all 2s ease 0s;
+}
